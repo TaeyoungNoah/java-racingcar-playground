@@ -21,5 +21,6 @@ public class GarageTest {
         List<Car> cars = garage.getCars();
         //then
         Assertions.assertThat(car1).isEqualTo(cars.get(0));
+        Assertions.assertThat(car2).isEqualTo(cars.get(1));
     }
 }
