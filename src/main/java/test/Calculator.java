@@ -13,11 +13,11 @@ public class Calculator {
         Matcher m = Pattern.compile("//(.)\n(.*)").matcher(input);
         if (m.find()) {
             String customDelimiter = m.group(1);
-            String[] inputArr= m.group(2).split(customDelimiter);
+            String[] inputArr = m.group(2).split(customDelimiter);
             int sumNum = 0;
             for (String s : inputArr) {
                 checkValid(s);
-                sumNum+=Integer.parseInt(s);
+                sumNum += Integer.parseInt(s);
             }
             return sumNum;
         }
@@ -26,7 +26,7 @@ public class Calculator {
         int sumNum = 0;
         for (String s : inputArr) {
             checkValid(s);
-            sumNum+=Integer.parseInt(s);
+            sumNum += Integer.parseInt(s);
         }
 
         return sumNum;
@@ -48,9 +48,9 @@ public class Calculator {
     }
 
     private void checkValid(String s) {
-        try{
+        try {
             int result = Integer.parseInt(s);
-            if(result<0) {
+            if (result < 0) {
                 throw new RuntimeException("[ERROR]");
             }
         } catch (NumberFormatException e) {
